@@ -4,7 +4,7 @@
 #
 Name     : perl-Software-License
 Version  : 0.103014
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Software-License-0.103014.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Software-License-0.103014.tar.gz
 Summary  : packages that provide templated software licenses
