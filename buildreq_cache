@@ -1,0 +1,9 @@
+0.103014
+perl(Data::OptList)
+perl(Data::Section)
+perl(MRO::Compat)
+perl(Params::Util)
+perl(Sub::Exporter)
+perl(Sub::Install)
+perl(Text::Template)
+perl(Try::Tiny)
