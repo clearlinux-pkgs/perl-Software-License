@@ -4,7 +4,7 @@
 #
 Name     : perl-Software-License
 Version  : 0.103014
-Release  : 6
+Release  : 7
 URL      : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Software-License-0.103014.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Software-License-0.103014.tar.gz
 Summary  : 'packages that provide templated software licenses'
@@ -136,35 +136,35 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/AGPL_3.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Apache_1_1.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Apache_2_0.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Artistic_1_0.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Artistic_2_0.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/BSD.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/CC0_1_0.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Custom.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/EUPL_1_1.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/EUPL_1_2.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/FreeBSD.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/GFDL_1_2.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/GFDL_1_3.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/GPL_1.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/GPL_2.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/GPL_3.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/LGPL_2_1.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/LGPL_3_0.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/MIT.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Mozilla_1_0.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Mozilla_1_1.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Mozilla_2_0.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/None.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/OpenSSL.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Perl_5.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/PostgreSQL.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/QPL_1_0.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/SSLeay.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Sun.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/License/Zlib.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Software/LicenseUtils.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/AGPL_3.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Apache_1_1.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Apache_2_0.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Artistic_1_0.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Artistic_2_0.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/BSD.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/CC0_1_0.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Custom.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/EUPL_1_1.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/EUPL_1_2.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/FreeBSD.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GFDL_1_2.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GFDL_1_3.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GPL_1.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GPL_2.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GPL_3.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/LGPL_2_1.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/LGPL_3_0.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/MIT.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Mozilla_1_0.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Mozilla_1_1.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Mozilla_2_0.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/None.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/OpenSSL.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Perl_5.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/PostgreSQL.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/QPL_1_0.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/SSLeay.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Sun.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Zlib.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Software/LicenseUtils.pm
