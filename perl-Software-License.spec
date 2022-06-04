@@ -4,12 +4,13 @@
 #
 Name     : perl-Software-License
 Version  : 0.104001
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Software-License-0.104001.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Software-License-0.104001.tar.gz
 Summary  : 'packages that provide templated software licenses'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Software-License-license = %{version}-%{release}
 Requires: perl-Software-License-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Data::OptList)
@@ -34,6 +35,14 @@ Requires: perl-Software-License = %{version}-%{release}
 
 %description dev
 dev components for the perl-Software-License package.
+
+
+%package license
+Summary: license components for the perl-Software-License package.
+Group: Default
+
+%description license
+license components for the perl-Software-License package.
 
 
 %package perl
@@ -71,6 +80,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Software-License
+cp %{_builddir}/Software-License-0.104001/LICENSE %{buildroot}/usr/share/package-licenses/perl-Software-License/0e2d7d134f22bd6d5ca2bf66929bb92199879ac5
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -119,37 +130,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Software::License::Zlib.3
 /usr/share/man/man3/Software::LicenseUtils.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Software-License/0e2d7d134f22bd6d5ca2bf66929bb92199879ac5
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/AGPL_3.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Apache_1_1.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Apache_2_0.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Artistic_1_0.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Artistic_2_0.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/BSD.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/CC0_1_0.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Custom.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/EUPL_1_1.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/EUPL_1_2.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/FreeBSD.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GFDL_1_2.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GFDL_1_3.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GPL_1.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GPL_2.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/GPL_3.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/LGPL_2_1.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/LGPL_3_0.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/MIT.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Mozilla_1_0.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Mozilla_1_1.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Mozilla_2_0.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/None.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/OpenSSL.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Perl_5.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/PostgreSQL.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/QPL_1_0.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/SSLeay.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Sun.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/License/Zlib.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Software/LicenseUtils.pm
+/usr/lib/perl5/*
