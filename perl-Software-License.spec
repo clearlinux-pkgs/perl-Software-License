@@ -7,7 +7,7 @@
 #
 Name     : perl-Software-License
 Version  : 0.104005
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Software-License-0.104005.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Software-License-0.104005.tar.gz
 Summary  : 'packages that provide templated software licenses'
