@@ -1,6 +1,7 @@
 0.104005
 perl(Data::OptList)
 perl(Data::Section)
+perl(Getopt::Long)
 perl(MRO::Compat)
 perl(Params::Util)
 perl(Sub::Exporter)
