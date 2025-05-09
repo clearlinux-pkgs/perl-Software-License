@@ -7,12 +7,13 @@
 #
 Name     : perl-Software-License
 Version  : 0.104007
-Release  : 24
+Release  : 25
 URL      : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Software-License-0.104007.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Software-License-0.104007.tar.gz
 Summary  : 'packages that provide templated software licenses'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Software-License-license = %{version}-%{release}
 Requires: perl-Software-License-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Data::OptList)
@@ -40,6 +41,14 @@ Requires: perl-Software-License = %{version}-%{release}
 
 %description dev
 dev components for the perl-Software-License package.
+
+
+%package license
+Summary: license components for the perl-Software-License package.
+Group: Default
+
+%description license
+license components for the perl-Software-License package.
 
 
 %package perl
@@ -80,6 +89,10 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Software-License
+cp %{_builddir}/Software-License-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/perl-Software-License/ac0df00d4c2176211d37d6479d1c9a3ffb9e1062 || :
+cp %{_builddir}/Software-License-%{version}/lib/Software/License.pm %{buildroot}/usr/share/package-licenses/perl-Software-License/179207aaf75884110e34c863bbdf85806e2eaad4 || :
+cp %{_builddir}/Software-License-%{version}/lib/Software/LicenseUtils.pm %{buildroot}/usr/share/package-licenses/perl-Software-License/2393dbddbf8b61d1187cd3beab65eb4be4439c82 || :
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -130,6 +143,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Software::License::Sun.3
 /usr/share/man/man3/Software::License::Zlib.3
 /usr/share/man/man3/Software::LicenseUtils.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Software-License/179207aaf75884110e34c863bbdf85806e2eaad4
+/usr/share/package-licenses/perl-Software-License/2393dbddbf8b61d1187cd3beab65eb4be4439c82
+/usr/share/package-licenses/perl-Software-License/ac0df00d4c2176211d37d6479d1c9a3ffb9e1062
 
 %files perl
 %defattr(-,root,root,-)
